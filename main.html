@@ -2,228 +2,138 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Company Footer Example</title>
+  <title>Responsive Footer For Company</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Font Awesome for social icons -->
+  <!-- Font Awesome for social icons (optional) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
-    body {
-      margin: 0;
-      background: #111;
-      color: #fff;
-      font-family: 'Montserrat', Arial, sans-serif;
-    }
     .footer {
-      background: #111;
+      background: #222;
       color: #fff;
-      width: 100vw;
-      padding: 40px 0 0 0;
+      font-family: Arial, sans-serif;
+      padding: 30px 0 10px 0;
     }
-    .footer-main {
+    .link-boxes {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: flex-start;
-      max-width: 1190px;
-      margin: 0 auto;
-      padding: 0 24px;
+      max-width: 1100px;
+      margin: 0 auto 15px auto;
+      padding: 0 10px;
+      gap: 32px;
     }
-    .footer-logo-social {
-      flex: 1 1 220px;
-      min-width: 180px;
-      margin-bottom: 30px;
-    }
-    .footer-logo {
-      font-size: 2.1rem;
-      font-weight: 600;
-      letter-spacing: 1px;
+    .footer-section {
+      min-width: 160px;
       margin-bottom: 24px;
-      font-family: 'Montserrat', Arial, sans-serif;
     }
-    .media-icons {
-      display: flex;
-      gap: 18px;
-      margin-top: 7px;
-    }
-    .media-icons a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: #2e2f31;
-      transition: background 0.2s;
-      color: #fff;
-      font-size: 1.25rem;
-      text-decoration: none;
-    }
-    .media-icons a.facebook { background: #3b5999; }
-    .media-icons a.twitter { background: #55acee; }
-    .media-icons a.instagram { background: #e4405f; }
-    .media-icons a.linkedin { background: #0077b5; }
-    .media-icons a.youtube { background: #ff0000; }
-    .media-icons a:hover { opacity: 0.85; }
-
-    .footer-cols {
-      flex: 4 1 900px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 50px;
-      justify-content: flex-end;
-    }
-    .footer-col {
-      min-width: 150px;
-      margin-bottom: 30px;
-    }
-    .footer-col h3 {
-      font-size: 1.11rem;
+    .footer-section h3 {
+      margin-bottom: 10px;
+      font-size: 1.05rem;
       font-weight: 600;
-      margin-bottom: 12px;
-      border-bottom: 2px solid #fff;
-      width: fit-content;
-      padding-bottom: 2px;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.5px;
     }
-    .footer-col ul {
+    .footer-section ul {
       list-style: none;
       padding: 0;
       margin: 0;
-      line-height: 2.1;
-      font-size: 1.01rem;
     }
-    .footer-col ul li,
-    .footer-col ul li a {
+    .footer-section ul li {
+      margin-bottom: 6px;
+    }
+    .footer-section ul li a {
       color: #bbb;
       text-decoration: none;
-      transition: color 0.15s;
+      font-size: 1rem;
+      transition: color 0.2s;
     }
-    .footer-col ul li a:hover {
+    .footer-section ul li a:hover {
       color: #fff;
       text-decoration: underline;
     }
-    .footer-col .contact-info {
+    .contact-info {
+      font-size: 1.02rem;
       color: #bbb;
-      font-size: 1.01rem;
-      line-height: 2.1;
+      margin-top: 3px;
     }
-
-    .footer-bottom {
-      background: #23242a;
-      color: #bbb;
-      font-size: 1rem;
+    /* Social icons */
+    .media-icons {
       display: flex;
-      justify-content: space-between;
+      gap: 12px;
+      margin-top: 10px;
+    }
+    .media-icons a {
+      display: flex;
       align-items: center;
-      padding: 15px 24px;
-      margin-top: 6px;
-      min-height: 44px;
-      letter-spacing: 0.01em;
-    }
-    .footer-bottom a {
-      color: #bbb;
-      text-decoration: none;
-      transition: color 0.15s;
-      font-size: 1rem;
-    }
-    .footer-bottom a:hover {
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #444;
       color: #fff;
-      text-decoration: underline;
+      font-size: 1.08rem;
+      transition: background 0.18s;
+      text-decoration: none;
     }
-    @media (max-width: 900px) {
-      .footer-main {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
+    .media-icons a:hover { background: #e60023; color: #fff;}
+    @media (max-width: 800px) {
+      .link-boxes {
+        gap: 18px;
       }
-      .footer-cols {
-        flex-wrap: wrap;
-        gap: 30px;
-        width: 100%;
-        justify-content: flex-start;
-      }
-      .footer-logo-social {
-        margin-bottom: 10px;
-      }
+      .footer-section { min-width: 120px;}
     }
     @media (max-width: 600px) {
-      .footer{
-        padding: 24px 0 0 0;
-      }
-      .footer-main {
-        padding: 0 10px;
-      }
-      .footer-cols {
-        gap: 20px;
-      }
-      .footer-col {
-        min-width: 130px;
-        font-size: 1rem;
-      }
-      .footer-bottom {
+      .link-boxes {
         flex-direction: column;
-        gap: 8px;
-        font-size: 0.95rem;
-        align-items: flex-start;
-        padding: 14px 10px;
+        align-items: stretch;
+        gap: 18px;
       }
+      .footer-section { min-width: 0;}
     }
   </style>
 </head>
 <body>
   <footer class="footer">
-    <div class="footer-main">
-      <div class="footer-logo-social">
-        <div class="footer-logo">company</div>
+    <div class="link-boxes">
+      <div class="footer-section">
+        <h3>Home</h3>
+        <ul>
+          <li><a href="#">Homepage</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>About</h3>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Links</h3>
+        <ul>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Blogs</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="#">Design</a></li>
+          <li><a href="#">Consulting</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <div class="contact-info">
+          8879887262
+        </div>
         <div class="media-icons">
-          <a class="facebook" href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a class="twitter" href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a class="instagram" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a class="linkedin" href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a class="youtube" href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="media-icons" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="media-icons" title="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="media-icons" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="media-icons" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="media-icons" title="YouTube"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
-      <div class="footer-cols">
-        <div class="footer-col">
-          <h3>Links</h3>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Get Started</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h3>Services</h3>
-          <ul>
-            <li><a href="#">App Design</a></li>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Logo Design</a></li>
-            <li><a href="#">Banner Design</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h3>Other services</h3>
-          <ul>
-            <li><a href="#">SEO</a></li>
-            <li><a href="#">Content Marketing</a></li>
-            <li><a href="#">Prints</a></li>
-            <li><a href="#">Social Media</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h3>Contact</h3>
-          <div class="contact-info">
-            +91 8879887262<br>
-            +91 8879887262<br>
-            <a href="mailto:contact@company.com">contact@company.com</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div>Copyright © 2021 company.</div>
-      <a href="#">Privacy policy</a>
     </div>
   </footer>
 </body>
